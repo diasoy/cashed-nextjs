@@ -2,12 +2,10 @@
 
 import { z } from "zod";
 import { prisma } from "@/lib/prisma";
-import { unstable_noStore } from "next/cache";
 
-
-const CategorySchema = z.object({
+const FormSchema = z.object({
     id: z.string(),
-    name: z.string(),
+    name: z.string().min(3).max(15),
     active: z.boolean(),
     createdAt: z.string(),
 })

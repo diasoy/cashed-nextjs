@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Noto_Serif } from "next/font/google";
 
-export const montserrat = Montserrat({ subsets: ['latin'] });
 export const inter = Inter({ subsets: ['latin'] });
+export const notoSerif = Noto_Serif({ subsets: ['latin'] });

@@ -1,5 +1,5 @@
+import SideNav from "@/components/dashboard/side-nav";
 import { Metadata } from "next";
-import SideNav from "../../components/ui/dashboard/side-nav";
 import React from "react";
 
 export const metadata: Metadata = {

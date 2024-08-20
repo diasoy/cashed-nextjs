@@ -1,6 +1,7 @@
-import { CreateCategory } from "@/components/ui/categories/create-form";
-import CategoriesTable from "@/components/ui/categories/table";
-import { montserrat } from "@/lib/fonts";
+import { CreateCategory } from "@/components/categories/create-form";
+import CategoriesTable from "@/components/categories/table";
+import { Skeleton } from "@/components/ui/skeleton";
+import { notoSerif } from "@/lib/fonts";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 
@@ -20,14 +21,12 @@ export default async function Page({
   return (
     <div className="w-full">
       <div className="flex w-full items-center justify-between">
-        <h1 className={`${montserrat.className} text-2xl font-medium`}>
-          Categories
-        </h1>
+        <h1 className={`${notoSerif.className} text-4xl`}>Categories</h1>
       </div>
       <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
         <CreateCategory />
       </div>
-      <Suspense key={query} fallback={<div>Loading...</div>}>
+      <Suspense key={query} fallback={<Skeleton />}>
         <CategoriesTable query={query} />
       </Suspense>
     </div>

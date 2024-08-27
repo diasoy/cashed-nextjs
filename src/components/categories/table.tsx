@@ -10,18 +10,10 @@ import {
 } from "../ui/table";
 import { Badge } from "../ui/badge";
 import { formatDateToLocal } from "@/lib/utils";
-import { FaPencilAlt, FaTrashAlt } from "react-icons/fa";
+import { FaPenAlt } from "react-icons/fa";
 import Link from "next/link";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "../ui/dialog";
-import EditCategory from "./edit-form";
 import { Button } from "../ui/button";
+import { DeleteCategory } from "./button";
 
 export default async function CategoriesTable({ query }: { query: string }) {
   const categories = await getDataCategories(query);
@@ -54,10 +46,12 @@ export default async function CategoriesTable({ query }: { query: string }) {
               {formatDateToLocal(category.createdAt.toString())}
             </TableCell>
             <TableCell className="flex gap-1 items-center">
-              <EditCategory />
-              <Button variant="outline">
-                <FaTrashAlt />
-              </Button>
+              <Link href={`/dashboard/categories/${category.id}/edit`}>
+                <Button variant="outline">
+                  <FaPenAlt />
+                </Button>
+              </Link>
+              <DeleteCategory id={category.id} />
             </TableCell>
           </TableRow>
         ))}

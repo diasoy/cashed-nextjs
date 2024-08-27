@@ -1,4 +1,10 @@
-import { Inter, Montserrat, Noto_Serif } from "next/font/google";
+import { Rosarivo, Poppins } from "next/font/google";
 
-export const inter = Inter({ subsets: ['latin'] });
-export const notoSerif = Noto_Serif({ subsets: ['latin'] });
+export const items = Poppins({
+    subsets: ['latin'],
+    weight: "400"
+});
+export const title = Rosarivo({
+    subsets: ['latin'],
+    weight: "400"
+});

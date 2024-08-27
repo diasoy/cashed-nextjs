@@ -25,7 +25,7 @@ const NavLinks = () => {
           className={clsx(
             "flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm bg-secondary font-medium hover:bg-primary-foreground md:flex-none md:justify-start md:p-2 md:px-3",
             {
-              "text-primary": pathname === link.href,
+              "text-blue-500": pathname === link.href,
             }
           )}
         >

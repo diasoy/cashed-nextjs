@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter } from "@/lib/fonts";
+import { items } from "@/lib/fonts";
 import { ThemeProvider } from "@/components/ui/theme-provider"
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className}`}
+        className={`${items.className}`}
       >
         <ThemeProvider
             attribute="class"

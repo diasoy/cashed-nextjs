@@ -2,8 +2,8 @@ import React from "react";
 import NavLinks from "./nav-links";
 import { IoLogOutOutline } from "react-icons/io5";
 import Link from "next/link";
-import { notoSerif } from "@/lib/fonts";
 import { ModeToggle } from "../ui/button-themes";
+import { title } from "@/lib/fonts";
 
 const SideNav = () => {
   return (
@@ -11,7 +11,7 @@ const SideNav = () => {
       <div className="flex h-full flex-col gap-2 px-3 py-4 md:px-2">
         <Link
           href="/dashboard"
-          className={`${notoSerif.className} text-white text-3xl mb-2 flex h-20 items-end justify-start rounded-md p-4 md:h-40 bg-primary`}
+          className={`${title.className} font-bold text-white dark:bg-blue-800 text-3xl flex h-20 items-end justify-start rounded-md p-4 md:h-40 bg-primary`}
         >
           Cashed
         </Link>
